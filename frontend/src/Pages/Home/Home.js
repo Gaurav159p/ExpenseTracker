@@ -58,12 +58,12 @@ const Home = () => {
         console.log(user);
 
         if (user.isAvatarImageSet === false || user.avatarImage === "") {
-          navigate("/setAvatar");
+          navigate("/");
         }
         setcUser(user);
         setRefresh(true);
       } else {
-        navigate("/login");
+        navigate("/");
       }
     };
 
