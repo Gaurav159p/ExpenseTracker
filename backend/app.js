@@ -15,7 +15,7 @@ const app = express();
 const port = process.env.PORT;
 
 connectDB();
-
+app.use(cors());
 const allowedOrigins = [
   "https://main.d1sj7cd70hlter.amplifyapp.com",
   "https://expense-tracker-app-three-beryl.vercel.app",
@@ -45,6 +45,6 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(port, () => {
-  console.log(`Server is listening on http://localhost:${port}`);
+app.listen(4000, () => {
+  console.log(`Server is listening on http://localhost:4000`);
 });
